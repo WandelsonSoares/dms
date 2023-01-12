@@ -1,0 +1,23 @@
+﻿#conteudo-principal
+{
+    width:40%;
+    height: 100%;
+}
+
+#conteudo-left
+{
+    width:60%;
+    height: 100%;
+    float: left;   
+}
+
+#conteudo-right
+{
+    width:600px;
+    height: 100%;
+    float: left;    
+}
+
+body 
+{
+}

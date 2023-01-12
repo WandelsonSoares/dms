@@ -1,0 +1,37 @@
+
+    a.Comentado 
+    {
+	    position: relative;
+	    font: 12px arial, verdana, helvetica, sans-serif;
+	    padding: 0;
+	    color: #039;
+	    text-decoration: none;
+	    cursor: help;
+	    z-index: 24;
+    }
+    a.Comentado:hover {
+	    background: transparent;
+	    z-index: 25;
+    }
+    a.Comentado span {
+	    display: none;
+    }
+    a.Comentado:hover span {
+	    display: block;
+	    position: absolute;
+	    width: auto;
+	    top: 0em;
+	    text-align: justify;
+	    left: 6em;
+	    font: 10px Verdana, arial, helvetica, sans-serif;
+	    padding: 5px 10px;
+	    border: 1px solid #999;
+	    background: #E8EBF2;
+	    color: #000;
+    }
+    a:link {
+        color: none 
+    }
+    a:visited {
+        color: none 
+    }

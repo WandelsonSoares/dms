@@ -1,0 +1,177 @@
+.modalBackground {
+    background-color: whitesmoke;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+.modalPopup {
+    background-color: #ffffdd;
+    border-width: 3px;
+    border-style: solid;
+    border-color: Gray;
+    padding: 3px;
+    width: 250px;
+}
+
+.conteudoCabecalhoPainelEsquerdo {
+    width: 300px;
+    float: left;
+    background: #ff0000;
+}
+
+#conteudo-cabecalho-painelDireito {
+    width: auto;
+    float: right;
+}
+
+#conteudo-menu-horizontal {
+    float: left;
+    background: #dee3e8;
+}
+
+#conteudo-rodape {
+    clear: both;
+    background: #acd5d7;
+}
+
+.dashboardIconeMedio {
+    width: 70px;
+    height: 70px;
+    vertical-align: top;
+    padding: 0px;
+}
+
+.dashboardLabelMedio {
+    width: 300px;
+    height: 70px;
+    vertical-align: top;
+    padding: 0px;
+}
+
+.dashboardTabelaLabel {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    padding: 0px;
+}
+
+.dashboardLabelGrandeText {
+    font-family: Tahoma, Arial;
+    font-size: 28px;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.dashboardLabelPequenoText {
+    font-family: Tahoma, Arial;
+    font-size: 14px;
+    vertical-align: top;
+}
+
+.dashboardIcone {
+    width: 70px;
+    height: 70px;
+    background-color: #558ed5;
+}
+
+.textoConteudoPequenoBranco {
+    font-family: Tahoma, Arial;
+    font-size: 12px;
+    vertical-align: top;
+    color: #ffffff;
+}
+
+.textoConteudoPequeno {
+    font-family: Tahoma, Arial;
+    font-size: 10px;
+    vertical-align: top;
+}
+
+.masterPageHeaderDiv {
+    width: 100%;
+    height: 84px;
+    background-color: #3cbdfe;
+    box-shadow: 0px 2px 5px #888888;
+}
+
+.masterPageMenuPrincipalTable {
+    width: 210px;
+    height: 100vh;
+    background-color: #fcfcfc;
+    border-width: thin;
+    border-color: #808080;
+}
+
+.masterPageMenuPrincipalLinkButton {
+    color: #7f7f7f;
+    font-family: Tahoma;
+    font-size: 14px;
+}
+
+.conteudoPrincipal {
+    background-color: #f5f5f5;
+    vertical-align: top;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+
+.masterPageHeaderNotificacoesLabel {
+    font-family: Tahoma;
+    font-size: 9px;
+    color: white;
+    font-weight: bold;
+}
+
+.fontePadrao {
+    font-family: Tahoma;
+    font-size: 12px;
+    color: black;
+}
+
+.rptr table {
+    background: #fcfcfc;
+    font: 14px arial;
+    border-collapse: collapse;
+    width: 32%;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+}
+
+    .rptr table th {
+        background: #ffd800;
+        color: black;
+        padding: 8px 10px;
+        text-align: left;
+    }
+
+    .rptr table td {
+        padding: 5px 10px;
+    }
+
+
+.repeaterEtapas{
+    border: solid;
+    border-color: lightgray;
+    border-width: 1px;
+}
+
+.repeaterEtapas table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 11px;
+    background-color: #fdffd1;
+}
+
+    .repeaterEtapas table th {
+        background: #3cbdfe;
+        color: white;
+        font-size: 12px;
+        text-align: center;
+    }
+
+
+.headerTextCenter {
+    text-align: center;
+}
