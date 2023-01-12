@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+
+<%@ Register src="wucHeader.ascx" tagname="wucHeader" tagprefix="uc1" %>
+<%@ Register src="wucMenu.ascx" tagname="wucMenu" tagprefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title>DMS</title>
+<asp:ContentPlaceHolder id="head" runat="server"> </asp:ContentPlaceHolder>
+
+<style type="text/css">
+.style20
+{
+font-size: 1pt;
+}
+
+.bordaBox {background: transparent; width:30%;}
+.bordaBox .b1, .bordaBox .b2, .bordaBox .b3, .bordaBox .b4, .bordaBox .b1b, .bordaBox .b2b, .bordaBox .b3b, .bordaBox .b4b {display:block; overflow:hidden; font-size:1px;}
+.bordaBox .b1, .bordaBox .b2, .bordaBox .b3, .bordaBox .b1b, .bordaBox .b2b, .bordaBox .b3b {height:1px;}
+.bordaBox .b2, .bordaBox .b3, .bordaBox .b4 {background:#CECECE; border-left:1px solid #999; border-right:1px solid #999;}
+.bordaBox .b1 {margin:0 5px; background:#999;}
+.bordaBox .b2 {margin:0 3px; border-width:0 2px;}
+.bordaBox .b3 {margin:0 2px;}
+.bordaBox .b4 {height:2px; margin:0 1px;}
+.bordaBox .conteudo {padding:5px;display:block; background:#ffffff; border-left:1px solid #999; border-right:1px solid #999;}
+
+
+.TD_PRINCIPAL
+{   
+width:100%;
+background-color:#f5f5f5;
+border-top-style: solid; 
+border-left-style: solid; 
+border-top-width: 1px; 
+border-left-width: 1px; 
+border-top-color: #C0C0C0; 
+border-left-color: #C0C0C0;   
+}
+
+
+
+</style>
+
+	<link rel="stylesheet" type="text/css" href="Script/tcal.css" />
+	<script type="text/javascript" src="Script/tcal.js"></script> 
+
+</head>
+<body style="margin-top:0px; margin-left:0px; margin-right:0px">
+
+<form id="form1" runat="server">
+<div>
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+    <div>
+        <uc1:wucHeader ID="wucHeader1" runat="server" />
+    </div>
+    <div>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="height:850%">
+        <tr>
+            <td valign="Top" style="height:100%; background-color: #005FFD;">
+                <table cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td valign="top">
+                            <uc2:wucMenu ID="wucMenu1" runat="server" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td valign="top" width="100%" class="TD_PRINCIPAL">
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                            <div style="vertical-align:top">
+                                <br />
+                                <br />
+                                <br />
+                            </div>
+                      </ContentTemplate>
+                 </asp:UpdatePanel>
+             </td>
+        </tr>
+    </table>
+    </div>
+</asp:ContentPlaceHolder>
+</div>
+
+</form>
+</body>
+</html>
