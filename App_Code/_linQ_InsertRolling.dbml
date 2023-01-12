@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SGC_NET_V1" Class="_linQ_InsertRollingDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=CMBBETAPPL01;Initial Catalog=SGC_NET_V1;Persist Security Info=True;User ID=sa;Pooling=False;Connect Timeout=180000" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SGC_NET_V1ConnectionString2" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.Stp_Insert_Forecast_Rolling" Method="Stp_Insert_Forecast_Rolling">
+    <Parameter Name="ContaID" Parameter="contaID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ContratoID" Parameter="contratoID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TipoConta" Parameter="tipoConta" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Ano" Parameter="ano" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Mes" Parameter="mes" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Valor" Parameter="valor" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="FlagPub" Parameter="flagPub" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dt_emissao_NF" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="dt_venc_NF" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="BU" Parameter="bU" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Login" Parameter="login" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

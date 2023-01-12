@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ActionPlanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ActionPlan.dbo.ApprovalWorkFlows' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ActionPlan.dbo.PlanningActionGrid' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ActionPlan.dbo.SGC_share_link' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'ActionPlan.dbo.Tbl_Count' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Tbl_Count">
+          <Property Name="Count_ID" Type="int" />
+          <Property Name="Tipo" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ActionPlan.dbo.tbl_sms_myHome' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ActionPlan.dbo.tblAcoes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ActionPlan.dbo.tblAcoes_old' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'ActionPlan.dbo.tblAcoesGrupos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblAcoesGrupos">
+          <Property Name="Id" Type="varchar" MaxLength="50" />
+          <Property Name="Descricao" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'ActionPlan.dbo.tblAcoesSubgrupos' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tblAcoesSubgrupos">
+          <Property Name="Id" Type="varchar" MaxLength="50" />
+          <Property Name="Descricao" Type="varchar" MaxLength="50" />
+          <Property Name="IdGrupo" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+        <EntityType Name="tblFuncionarios">
+          <Key>
+            <PropertyRef Name="Matricula" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Matricula" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Cargo" Type="varchar" MaxLength="100" />
+          <Property Name="CentroCusto" Type="varchar" MaxLength="50" />
+          <Property Name="Situacao" Type="varchar" MaxLength="100" />
+          <Property Name="Ativo" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ActionPlan.dbo.tblPlanoAcoes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ActionPlan.dbo.tblPlanoAcoesAnexos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ActionPlan.dbo.Usuario_Acesso_Area' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'ActionPlan.dbo.Usuario_Online' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Usuario_Online">
+          <Property Name="UserID" Type="int" />
+          <Property Name="FullNome" Type="varchar" MaxLength="250" />
+          <Property Name="DateHist" Type="datetime" />
+        </EntityType>-->
+        <EntityContainer Name="ActionPlanModelStoreContainer">
+          <EntitySet Name="tblFuncionarios" EntityType="Self.tblFuncionarios" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ActionPlanModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="tblFuncionarios">
+          <Key>
+            <PropertyRef Name="Matricula" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Matricula" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Cargo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="CentroCusto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Situacao" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Ativo" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="ActionPlanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tblFuncionarios" EntityType="Self.tblFuncionarios" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ActionPlanModelStoreContainer" CdmEntityContainer="ActionPlanEntities">
+          <EntitySetMapping Name="tblFuncionarios">
+            <EntityTypeMapping TypeName="ActionPlanModel.tblFuncionarios">
+              <MappingFragment StoreEntitySet="tblFuncionarios">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Matricula" ColumnName="Matricula" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="CentroCusto" ColumnName="CentroCusto" />
+                <ScalarProperty Name="Situacao" ColumnName="Situacao" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
